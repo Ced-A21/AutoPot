@@ -7,19 +7,6 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" />
     <style>
-        html, body {
-            height: 100%;
-        }
-
-        html {
-            display: table;
-            margin: auto;
-        }
-
-        body {
-            display: table-cell;
-            vertical-align: middle;
-        }
         .statstext {
             font-family: "Fjalla One";
         }
@@ -50,10 +37,8 @@
 
 </head>
 
-<body><center>
+<body>
 
-Plant Maintenance System
 <div id="dito">will show data here</div>
-</center>
 </body>
 </html>
