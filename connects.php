@@ -1,6 +1,6 @@
 <?php
 
-$DB_HOST = "localhost";
+$DB_HOST = "192.168.1.7";
 $DB_USER = "root"; 
 $DB_PASS = ""; 
 $DB_NAME = "pms";

@@ -1,4 +1,24 @@
 <form action="index.php" method="POST">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .statstext {
+            font-family: "Fjalla One";
+            font-size: 36px;
+        }
+    </style>
     <center>
         <?php
             include_once('connects.php');
@@ -14,27 +34,33 @@
 
             while($row=mysqli_fetch_array($check))
   	            {
-  	            echo "Temperature: ";
-	            echo $row['temp'] ;
-                    echo "</br>";
-	            echo "Humidity: ";
-	            echo $row['humidity'] ;
-                    echo "</br>";
-	            echo "Soil Moisture: ";
-	            echo $row['soil_mois'] ;
-                    echo "</br>";
-	            echo "Light Exposure: ";
-	            echo $row['light_exp'] ;
-                    echo "</br>";
-	            echo "Timestamp: ";
-	            echo $row['timestamp'] ;
-                    echo "</br>";
-  	            echo "---------------------------------------------------</br>";
-  	            }
+                      echo "<div class='card-columns'>
+                    <div class='card text-white bg-success mb-3' style='max-width: 18rem;'>
+                        <div class='card-body'>
+                            <p class='card-title' align='left'>Temperature<p>
+                            <p class='card-text statstext'>" . $row['temp'] . "°C</p>";
+                        echo "</div>
+                    </div>
+                    <div class='card text-white bg-success mb-3' style='max-width: 18rem;'>
+                        <div class='card-body'>
+                            <p class='card-title' align='left'>Humidity<p>
+                            <p class='card-text statstext'>" . $row['humidity'] . "%</p>";
+                        echo "</div>
+                    </div>
+                    <div class='card text-white bg-success mb-3' style='max-width: 18rem;'>
+                        <div class='card-body'>
+                            <p class='card-title' align='left'>Soil Moisture<p>
+                            <p class='card-text statstext'>" . $row['soil_mois'] . "%</p>";
+                        echo "</div>
+                    </div>
+                    <div class='card text-white bg-success mb-3' style='max-width: 18rem;'>
+                        <div class='card-body'>
+                            <p class='card-title' align='left'>Light Exposure<p>
+                            <p class='card-text statstext'>" . $row['light_exp'] . "IU</p>";
+                        echo "</div>
+                     </div>
+                </div>";
+            }
         ?>
     </center>
-<<<<<<< HEAD
 </form>
-=======
-</form>
->>>>>>> 21bd146f88f1d359f753bd4f78091dbc5a49920e

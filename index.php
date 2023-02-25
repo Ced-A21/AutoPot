@@ -4,6 +4,26 @@
 <title>Fetch FROM DATABASE and AJAX</title>
 <head>
 
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" />
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        html {
+            display: table;
+            margin: auto;
+        }
+
+        body {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .statstext {
+            font-family: "Fjalla One";
+        }
+    </style>
 
 <script type="text/javascript">
 <script type="text/javascript" src="js/jquery-ui.min.js" ></script>
@@ -11,32 +31,29 @@
 <script type="text/javascript" src="js/jquery-ui.min.js" ></script>
 
 <script>
-ajaxcall()
- $(document).ready(function(){
-     setInterval(ajaxcall, 1000);
- });
- var str="";
- function ajaxcall(){
-     $.ajax({
-	     type:'POST',
-         	     url: 'getData_ajax.php',
-                      success: function(data) {
-	     $('#dito').html(data);
-         }
-     });
- }
-</script>
+    ajaxcall()
+    $(document).ready(function(){
+         setInterval(ajaxcall, 1000);
+    });
+    var str="";
 
+    function ajaxcall(){
+        $.ajax({
+	        type:'POST',
+         	url: 'getData_ajax.php',
+            success: function(data) {
+	        $('#dito').html(data);
+            }
+        });
+    }
+</script>
 
 </head>
 
-
-
 <body><center>
 
-
 Plant Maintenance System
-<span id="dito">will show data here</span>
+<div id="dito">will show data here</div>
 </center>
 </body>
 </html>
