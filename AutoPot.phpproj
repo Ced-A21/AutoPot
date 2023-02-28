@@ -11,7 +11,4 @@
   <ItemGroup>
     <Content Include="C:\Users\Ryzen 3 3200\Downloads\getData_ajax.php" Link="getData_ajax.php" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
 </Project>

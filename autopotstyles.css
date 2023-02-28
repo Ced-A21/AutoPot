@@ -42,7 +42,7 @@ nav {
 }
 
 #dataCol {
-    background-image: url(Images/Photo9.jpg);
+    /*background-image: url(Images/Photo9.jpg);*/
     min-height:30vh;
     background-size: contain;
     background-repeat: no-repeat;
