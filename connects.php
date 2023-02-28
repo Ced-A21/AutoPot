@@ -1,6 +1,6 @@
 <?php
 
-$DB_HOST = "192.168.100.18"; //change this to your ip address
+$DB_HOST = "localhost"; //change this to your ip address
 $DB_USER = "root";
 $DB_PASS = "";
 $DB_NAME = "pms";
