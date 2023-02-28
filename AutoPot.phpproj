@@ -1,4 +1,4 @@
-<Project Sdk="Devsense.Php.Sdk">
+﻿<Project Sdk="Devsense.Php.Sdk">
   <PropertyGroup Label="Globals">
     <ProjectGuid>8dc60a42-a9bb-4bff-8c34-7fd4663ea460</ProjectGuid>
   </PropertyGroup>
@@ -8,4 +8,10 @@
     <SpecificPageValue>index.php</SpecificPageValue>
     <StartAction>SpecificPage</StartAction>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="C:\Users\Ryzen 3 3200\Downloads\getData_ajax.php" Link="getData_ajax.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
 </Project>
