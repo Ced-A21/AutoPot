@@ -8,6 +8,10 @@
 
         <link href="../css/bootstrap.min.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" />
+        <link href="autopotstyles.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@1,700&family=Oswald&family=Pacifico&family=Redressed&family=Roboto+Serif&family=Ultra&display=swap" rel="stylesheet">
         <style>
             .statstext {
                 font-family: "Fjalla One";
@@ -41,17 +45,15 @@
     </head>
 
     <body>
-        <nav class='navbar navbar-dark bg-success'>
-            <div class='container-fluid'>
-            <span class='navbar-brand mb-0 h1'>Navbar</span>
-            </div>
-        </nav>
-
-        <div class='py-4'></div>
+        <div class="NavDiv">
+            <nav class="nav"> <!--class='navbar navbar-dark bg-success'-->
+                <h1 class=NavTitle>Auto Pot <i class="fa-solid fa-seedling"></i> </h1>
+            </nav>
+        </div>
 
         <div class='container text-center mw-100 border'>
             <div class='row'>
-                <div class='col border'>
+                <div class='col '>
                     <div id='current_stats'></div>
                 </div>
                 <div class='col-7 border'>
