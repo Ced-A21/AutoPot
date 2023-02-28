@@ -28,6 +28,26 @@
             getCurrentStats();
             $(document).ready(function(){
                 setInterval(getCurrentStats, 1000);
+                $( ".water" ).click(function() {
+                    $.ajax({
+                        url: "https://api.thingspeak.com/update?api_key=5T6XMZ0MZB3K8TVA&field1=1",
+                        type: "GET",
+                    });
+                    $('.water').prop('disabled', true);
+                    setTimeout(function() {
+                        $('.water').prop('disabled', false);
+                    }, 5000);
+                });
+                $( ".no-water" ).click(function() {
+                    $.ajax({
+                        url: "https://api.thingspeak.com/update?api_key=5T6XMZ0MZB3K8TVA&field1=0",
+                        type: "GET",
+                    });
+                    $('.no-water').prop('disabled', true);
+                    setTimeout(function() {
+                        $('.no-water').prop('disabled', false);
+                    }, 5000);
+                });
             });
             var str="";
     
@@ -36,7 +56,7 @@
 	                type:'POST',
          	        url: 'getData_ajax.php',
                     success: function(data) {
-	                $('#current_stats').html(data);
+	                    $('#current_stats').html(data);
                     }
                 });
             }
@@ -101,7 +121,8 @@
                     </div>
                     <div class='row h-50'>
                         <div class='col border'>
-                            <div id='hi'></div>
+                            <button class='water' name='water'>Water</button>
+                            <button class='no-water' name='no-water'>No Water</button>
                         </div>
                     </div>
                 </div>
