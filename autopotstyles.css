@@ -80,7 +80,7 @@ nav {
 }
 
 .waterButton {
-    width: 20vw;
+    width: 20vh;
     height: 10vh;
     border: none;
     border-radius: 25px;
@@ -102,3 +102,24 @@ nav {
 body {
     background-color: #f3f5f0;
 }
+
+#temp_but, #soil_but, #hum_but {
+    width: 20vh;
+    margin:30px;
+    height: 10vh;
+    border: none;
+    border-radius: 25px;
+    background-color: #718355;
+    color: black;
+    font-family: "Fjalla One";
+    font-size: 2rem;
+    transition: all 0.8s ease-out;
+}
+
+#temp_but:hover, #soil_but:hover, #hum_but:hover {
+    color: #E9F5DB;
+    text-decoration: underline;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+

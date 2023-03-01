@@ -151,7 +151,7 @@
                             <script>
                                 var options = {
                                     chart: {
-                                        height: '100%',
+                                        height: '80%',
                                         type: 'line',
                                     },
                                     dataLabels: {
@@ -186,9 +186,12 @@
                                     });
                                 }
                             </script>
-                            <button id='temp_but'>Temperature</button>
-                            <button id='hum_but'>Humidity</button>
-                            <button id='soil_but'>Soil Moisture</button>
+                            <div class="otherBtns">
+                                <button id='temp_but'>Temperature</button>
+                                <button id='hum_but'>Humidity</button>
+                                <button id='soil_but'>Soil Moisture</button>
+                            </div>
+                           
                         </div>
                     </div>
                     <!--<div class='row h-50'>
