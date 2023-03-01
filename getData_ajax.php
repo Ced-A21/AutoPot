@@ -24,20 +24,11 @@
             $check=mysqli_query($con,$query);
             $row=mysqli_num_rows($check);
 
-
-            $imgURL = 'Images/Photo9.jpg';
-
-
             if($check == FALSE) {
                 echo ".".$row.".";
             }
 
             while($row=mysqli_fetch_array($check)) {
-
-                if ($row['temp'] < '30'){
-                    $imgURL = 'Images/sample4.png';
-                }
-
                 echo "
                 <div class='card-columns'>
                     <div class='card' id='tempCol'>

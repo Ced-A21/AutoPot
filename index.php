@@ -26,8 +26,10 @@
 
         <script>
             getCurrentStats();
+            getImageStats();
             $(document).ready(function(){
-                setInterval(getCurrentStats, 1000);
+                setInterval(getCurrentStats, 2000);
+                setInterval(getImageStats, 2000);
                 $( ".water" ).click(function() {
                     $.ajax({
                         url: "https://api.thingspeak.com/update?api_key=5T6XMZ0MZB3K8TVA&field1=1",
@@ -99,12 +101,22 @@
             });
             var str="";
     
-            function getCurrentStats(){
+            function getCurrentStats() {
                 $.ajax({
 	                type:'POST',
          	        url: 'getData_ajax.php',
                     success: function(data) {
 	                    $('#current_stats').html(data);
+                    }
+                });
+            }
+            function getImageStats() {
+                $.ajax({
+                    type: 'POST',
+                    url: 'getImageURL.php',
+                    success: function (data) {
+                        trimData = data.trim();
+                        document.getElementById("plantimg").src = trimData;
                     }
                 });
             }
@@ -123,7 +135,7 @@
             <div class='row'>
                 <div class='col'>
                     <div class='container float-start' style='height:auto;width:17vw;margin-top:10vh;margin-inline-start:2.5vw;justify-content:center;align-items:center;'>
-                        <img src="/Images/sample1.png" class='border-5' style='height:45vh;width:11vw;' alt="...">
+                        <img src="/Images/sample1.png" id='plantimg' class='border-5' style='height:45vh;width:11vw;' alt="...">
                         <div class="waterBTN">
                         <button id='water' class="waterButton">
                             Water <i class="fa-solid fa-droplet"></i>
