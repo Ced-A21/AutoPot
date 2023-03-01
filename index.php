@@ -145,7 +145,7 @@
                     <div id='current_stats' class='float-end'></div>
                 </div>
                 <div class='col-7'>
-                    <div class='row h-50'>
+                    <div class='row h-100'>
                         <div class='col'>
                             <div id='chart'></div>
                             <script>
@@ -166,7 +166,8 @@
                                     },
                                     xaxis: {
                                         type: "datetime"
-                                    }
+                                    },
+                                    colors: ['#B5C99A']
                                 }
 
                                 var chart = new ApexCharts(
