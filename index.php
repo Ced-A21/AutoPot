@@ -119,12 +119,17 @@
                             </script>
                         </div>
                     </div>
-                    <div class='row h-50'>
+                    <div class="waterBTN">
+                        <button class="waterButton">
+                            Water <i class="fa-solid fa-droplet"></i>
+                        </button>
+                    </div>
+                    <!--<div class='row h-50'>
                         <div class='col border'>
                             <button class='water' name='water'>Water</button>
                             <button class='no-water' name='no-water'>No Water</button>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>

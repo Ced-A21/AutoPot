@@ -42,7 +42,7 @@ nav {
 }
 
 #dataCol {
-    background-image: url(Images/Photo9.jpg);
+    /*background-image: url(Images/Photo9.jpg);*/
     min-height:30vh;
     background-size: contain;
     background-repeat: no-repeat;
@@ -51,12 +51,14 @@ nav {
     display: flex;
     justify-content: center;
     padding-top:5vh;
+    
 }
 
 
 #tempCol, #humCol, #smCol, #leCol  {
     margin: 20px;
     color:black;
+    border-radius:25px;
 
 }
 
@@ -75,4 +77,31 @@ nav {
 
 #leCol {
     background: #97A07C;
+}
+
+.waterBTN{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top: 10vh;
+}
+
+.waterButton {
+    width: 20vh;
+    height: 10vh;
+    border: none;
+    border-radius: 25px;
+    background-color: #718355;
+    color: black;
+    font-family: "Fjalla One";
+    font-size: 2rem;
+    transition: all 0.8s ease-out;
+}
+
+.waterButton:hover {
+    color: #E9F5DB;
+    text-decoration: underline;
+    cursor: pointer;
+    width: 25vh;
+    transform: scale(1.2);
 }
