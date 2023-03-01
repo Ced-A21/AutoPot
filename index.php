@@ -33,20 +33,68 @@
                         url: "https://api.thingspeak.com/update?api_key=5T6XMZ0MZB3K8TVA&field1=1",
                         type: "GET",
                     });
-                    $('.water').prop('disabled', true);
+                    $('#water').prop('disabled', true);
                     setTimeout(function() {
-                        $('.water').prop('disabled', false);
+                        $('#water').prop('disabled', false);
                     }, 5000);
                 });
-                $( ".no-water" ).click(function() {
+                $("#temp_but").click(function () {
                     $.ajax({
-                        url: "https://api.thingspeak.com/update?api_key=5T6XMZ0MZB3K8TVA&field1=0",
-                        type: "GET",
+                        url: "getChartData_ajax.php",
+                        type: "POST",
+                        dataType: "text",
+                        data: { data: "temp" },
+                        success: function(data){
+                            var json = $.parseJSON(data);
+                            chart.updateOptions({
+                                title: { text: "Temperature" },
+                            });
+                              chart.updateSeries([
+                                {
+                                  name: "Temperature",
+                                  data: json
+                                }
+                            ]);
+                        }
                     });
-                    $('.no-water').prop('disabled', true);
-                    setTimeout(function() {
-                        $('.no-water').prop('disabled', false);
-                    }, 5000);
+                });
+                $("#hum_but").click(function () {
+                    $.ajax({
+                        url: "getChartData_ajax.php",
+                        type: "POST",
+                        data: { data: "hum" },
+                        success: function(data){
+                            var json = $.parseJSON(data);
+                            chart.updateOptions({
+                                title: { text: "Humidity" },
+                            });
+                              chart.updateSeries([
+                                {
+                                  name: "Humidity",
+                                  data: json
+                                }
+                            ]);
+                        }
+                    });
+                });
+                $("#soil_but").click(function () {
+                    $.ajax({
+                        url: "getChartData_ajax.php",
+                        type: "POST",
+                        data: { data: "soil" },
+                        success: function(data){
+                            var json = $.parseJSON(data);
+                            chart.updateOptions({
+                                title: { text: "Soil Moisture" },
+                            });
+                              chart.updateSeries([
+                                {
+                                  name: "Soil Moisture",
+                                  data: json
+                                }
+                            ]);
+                        }
+                    });
                 });
             });
             var str="";
@@ -71,14 +119,22 @@
             </nav>
         </div>
 
-        <div class='container text-center mw-100 border'>
+        <div class='container text-center mw-100'>
             <div class='row'>
-                <div class='col '>
-                    <div id='current_stats'></div>
+                <div class='col'>
+                    <div class='container float-start' style='height:auto;width:17vw;margin-top:10vh;margin-inline-start:2.5vw;justify-content:center;align-items:center;'>
+                        <img src="/Images/sample1.png" class='border-5' style='height:45vh;width:11vw;' alt="...">
+                        <div class="waterBTN">
+                        <button id='water' class="waterButton">
+                            Water <i class="fa-solid fa-droplet"></i>
+                        </button>
+                    </div>
+                    </div>
+                    <div id='current_stats' class='float-end'></div>
                 </div>
-                <div class='col-7 border'>
+                <div class='col-7'>
                     <div class='row h-50'>
-                        <div class='col border'>
+                        <div class='col'>
                             <div id='chart'></div>
                             <script>
                                 var options = {
@@ -117,12 +173,10 @@
                                     });
                                 }
                             </script>
+                            <button id='temp_but'>Temperature</button>
+                            <button id='hum_but'>Humidity</button>
+                            <button id='soil_but'>Soil Moisture</button>
                         </div>
-                    </div>
-                    <div class="waterBTN">
-                        <button class="waterButton">
-                            Water <i class="fa-solid fa-droplet"></i>
-                        </button>
                     </div>
                     <!--<div class='row h-50'>
                         <div class='col border'>

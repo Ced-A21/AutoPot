@@ -5,7 +5,6 @@
 }
 
 body{
-    overflow:hidden;
 }
 
 nav {
@@ -43,20 +42,15 @@ nav {
 
 #dataCol {
     /*background-image: url(Images/Photo9.jpg);*/
-    min-height:30vh;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
     background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    padding-top:5vh;
     
 }
 
 
 #tempCol, #humCol, #smCol, #leCol  {
-    margin: 20px;
     color:black;
     border-radius:25px;
 
@@ -83,18 +77,17 @@ nav {
     display:flex;
     justify-content:center;
     align-items:center;
-    padding-top: 10vh;
 }
 
 .waterButton {
-    width: 20vh;
+    width: 20vw;
     height: 10vh;
     border: none;
     border-radius: 25px;
     background-color: #718355;
     color: black;
     font-family: "Fjalla One";
-    font-size: 2rem;
+    font-size: 4vh;
     transition: all 0.8s ease-out;
 }
 
@@ -102,6 +95,6 @@ nav {
     color: #E9F5DB;
     text-decoration: underline;
     cursor: pointer;
-    width: 25vh;
-    transform: scale(1.2);
+    width: 20vw;
+    transform: scale(1.05);
 }
