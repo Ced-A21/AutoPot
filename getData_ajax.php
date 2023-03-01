@@ -31,25 +31,25 @@
             while($row=mysqli_fetch_array($check)) {
                 echo "
                 <div class='card-columns'>
-                    <div class='card' id='tempCol'>
+                    <div class='card shadow border-0' id='tempCol'>
                         <div class='card-body' id='card1'>
                         <p class='card-title statstitle' align='left'>Temperature<p>
                         <p class='card-text statstext'>" . $row['temp'] . "°C</p>";
                     echo "</div>
                     </div>
-                    <div class='card' id='humCol'>
+                    <div class='card shadow border-0' id='humCol'>
                         <div class='card-body' id='card2'>
                         <p class='card-title statstitle' align='left'>Humidity<p>
                         <p class='card-text statstext'>" . $row['humidity'] . "%</p>";
                     echo "</div>
                     </div>
-                    <div class='card' id='smCol'>
+                    <div class='card shadow border-0' id='smCol'>
                         <div class='card-body' id='card3'>
                         <p class='card-title statstitle' align='left'>Soil Moisture<p>
                         <p class='card-text statstext'>" . $row['soil_mois'] . "%</p>";
                     echo "</div>
                     </div>
-                    <div class='card' id='leCol'>
+                    <div class='card shadow border-0' id='leCol'>
                             <div class='card-body' id='card4'>
                             <p class='card-title statstitle' align='left'>Light Exposure<p>
                             <p class='card-text statstext'>" . $row['light_exp'] . "IU</p>";

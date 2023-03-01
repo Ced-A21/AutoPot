@@ -98,3 +98,7 @@ nav {
     width: 20vw;
     transform: scale(1.05);
 }
+
+body {
+    background-color: #f3f5f0;
+}

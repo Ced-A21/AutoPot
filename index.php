@@ -137,7 +137,7 @@
                     <div class='container float-start' style='height:auto;width:17vw;margin-top:10vh;margin-inline-start:2.5vw;justify-content:center;align-items:center;'>
                         <img src="/Images/sample1.png" id='plantimg' class='border-5' style='height:45vh;width:11vw;' alt="...">
                         <div class="waterBTN">
-                        <button id='water' class="waterButton">
+                        <button id='water' class="waterButton border-0 shadow">
                             Water <i class="fa-solid fa-droplet"></i>
                         </button>
                     </div>
