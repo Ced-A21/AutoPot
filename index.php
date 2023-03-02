@@ -32,7 +32,7 @@
                 setInterval(getImageStats, 2000);
                 $( "#water" ).click(function() {
                     $.ajax({
-                        url: "https://api.thingspeak.com/update?api_key=5T6XMZ0MZB3K8TVA&field1=0",
+                        url: "https://api.thingspeak.com/update?api_key=5T6XMZ0MZB3K8TVA&field1=1",
                         type: "GET",
                     });
                     $('#water').prop('disabled', true);
