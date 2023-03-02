@@ -30,9 +30,9 @@
             $(document).ready(function(){
                 setInterval(getCurrentStats, 2000);
                 setInterval(getImageStats, 2000);
-                $( ".water" ).click(function() {
+                $( "#water" ).click(function() {
                     $.ajax({
-                        url: "https://api.thingspeak.com/update?api_key=5T6XMZ0MZB3K8TVA&field1=1",
+                        url: "https://api.thingspeak.com/update?api_key=5T6XMZ0MZB3K8TVA&field1=0",
                         type: "GET",
                     });
                     $('#water').prop('disabled', true);

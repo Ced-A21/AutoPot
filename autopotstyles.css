@@ -104,7 +104,7 @@ body {
 }
 
 #temp_but, #soil_but, #hum_but {
-    width: 20vh;
+    width: 10vw;
     margin:30px;
     height: 10vh;
     border: none;
@@ -112,7 +112,7 @@ body {
     background-color: #718355;
     color: black;
     font-family: "Fjalla One";
-    font-size: 2rem;
+    font-size: 2.5vh;
     transition: all 0.8s ease-out;
 }
 
@@ -120,6 +120,6 @@ body {
     color: #E9F5DB;
     text-decoration: underline;
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
