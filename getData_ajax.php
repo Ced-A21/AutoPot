@@ -27,8 +27,15 @@
             if($check == FALSE) {
                 echo ".".$row.".";
             }
+            $x = '';
 
             while($row=mysqli_fetch_array($check)) {
+                if ($row['light_exp'] == 0){
+                    $x = 'Shaded';
+                }
+                elseif ($row['light_exp'] >= 1){
+                    $x = 'Bright';
+                }
                 echo "
                 <div class='card-columns'>
                     <div class='card shadow border-0' id='tempCol'>
@@ -52,7 +59,7 @@
                     <div class='card shadow border-0' id='leCol'>
                             <div class='card-body' id='card4'>
                             <p class='card-title statstitle' align='left'>Light Exposure<p>
-                            <p class='card-text statstext'>" . $row['light_exp'] . "IU</p>";
+                            <p class='card-text statstext'>" . $x;
                     echo "</div>
                     </div>";
             }
